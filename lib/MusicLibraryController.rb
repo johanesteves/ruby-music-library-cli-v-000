@@ -61,9 +61,9 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     input = gets.chomp
 
-    artist_results = Artist.all.detect do |artist|
-      artist.name == input
-    end
+    # artist_results = Artist.all.detect do |artist|
+    #   artist.name == input
+    # end
 
     artist_results = Artist.find_by_name(input)
 
