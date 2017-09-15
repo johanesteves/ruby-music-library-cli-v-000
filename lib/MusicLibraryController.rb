@@ -65,6 +65,8 @@ class MusicLibraryController
       artist.name == input
     end
 
+    artist_results = Artist.find_by_name(input)
+
     unless artist_results == (nil)
       sorted_results = artist_results.songs.sort_by{|song| song.name}
 
